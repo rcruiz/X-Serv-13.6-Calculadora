@@ -1,16 +1,13 @@
-#!/usr/bin/python
-# -*- coding:utf-8 -*-
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
 
 import sys
 
-#if len(sys.argv[0:]) != 4:
-#    print "Introduce python calculadora.py funcion operando1 operando2 "
+
 try:
-    funcion = sys.argv[1]
+    funcion = str(sys.argv[1])
     operando1 = float(sys.argv[2])
     operando2 = float(sys.argv[3])
-    
-
     if funcion == "sumar":
         res = operando1 + operando2
     elif funcion == "restar":
@@ -20,16 +17,12 @@ try:
     elif funcion == "dividir":
         res = operando1 / operando2
     else:
-        print "Operaciones permitidas: sumar, restar, multiplicar, dividir"
+        print("Operaciones permitidas: sumar, restar, multiplicar, dividir")
         res = None
-    print res
-
+    print(res)
 except IndexError:
-    print "Introduce python calculadora.py funcion operando1 operando2"
-    sys.exit()
+    sys.exit("Introduce python calculadora.py funcion operando1 operando2")
 except ValueError:
-    print "Introduzca operandos válidos: enteros o float con punto decimal"
-    sys.exit()
+    sys.exit("Introduzca operandos válidos: enteros o float con punto decimal")
 except ZeroDivisionError:
-    print "No se puede dividir entre 0."
-    sys.exit()
+    sys.exit("No se puede dividir entre 0.")
