@@ -18,10 +18,10 @@ elif funcion == "restar":
 elif funcion == "multiplicar":
     res = operando1 * operando2
 elif funcion == "dividir":
-    try:    
+    try:
         res = operando1 / operando2
     except ZeroDivisionError:
-        sys.exit("No se puede dividir entre 0.")   
+        sys.exit("No se puede dividir entre 0.")
 else:
     print("Operaciones permitidas: sumar, restar, multiplicar, dividir")
     res = None
